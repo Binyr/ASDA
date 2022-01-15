@@ -1,22 +1,23 @@
-##Introduction
+## Introduction
 
-This is an official pytorch implementation of Adversarial Semantic Data Augmentation for Human Pose Estimation. Code will be released soon.
+This is an official pytorch implementation of Adversarial Semantic Data Augmentation for Human Pose Estimation.
+This code is based on the [official pytorch implementation of HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch)
 
 ## Environment
-python 3.7
-torch==1.0.1.post2
-torchvision==0.2.2
+python 3.7  
+torch==1.0.1.post2  
+torchvision==0.2.2  
 
-EasyDict==1.7
-opencv-python==3.4.1.15
-shapely==1.6.4
-Cython
-scipy
-pandas
-pyyaml
-json_tricks
-scikit-image
-yacs>=0.1.5
+EasyDict==1.7  
+opencv-python==3.4.1.15  
+shapely==1.6.4  
+Cython  
+scipy  
+pandas  
+pyyaml  
+json_tricks  
+scikit-image  
+yacs>=0.1.5  
 tensorboardX==1.6
 
 ## Quick start
@@ -194,7 +195,7 @@ python tools/visualize_stn.py \
 
 
 ### Model ZOO
-#### MPII dataset
+#### [MPII dataset](https://drive.google.com/drive/folders/10jgEBFxNge7L5xeO3v3eRgVl1u9l063d?usp=sharing)
 |Name|Path|
 |---|---|
 |HRNet-w32 Num_Parts1|output/mpii/pose_hrnet2/w32_256x256_adam_lr1e-3_adversalstnlr0001_posefirst_res18_numPart1_nohfp_bmp/model_best.pth|
@@ -212,3 +213,13 @@ python tools/visualize_stn.py \
 |HRNet-w48 Num_Parts1|output/mpii/pose_hrnet2/w48_256x256_adam_lr1e-3_adversalstnlr0001_posefirst_res18_numPart1_nohfp_bmp/model_best.pth|
 |SIM50 Num_Parts4|output/mpii/pose_resnet/res50_256x256_d256x3_adam_lr1e-3_stn_res18_numPart4/model_best.pth|
 |SIM101 Num_Parts1|output/mpii/pose_resnet/res101_256x256_d256x3_adam_lr1e-3_stn_res18_numPart1/model_best.pth|
+
+## Citation
+@inproceedings{bin2020adversarial,  
+  title={Adversarial semantic data augmentation for human pose estimation},  
+  author={Bin, Yanrui and Cao, Xuan and Chen, Xinya and Ge, Yanhao and Tai, Ying and Wang, Chengjie and Li, Jilin and Huang, Feiyue and Gao, Changxin and Sang, Nong},  
+  booktitle={European Conference on Computer Vision},  
+  pages={606--622},  
+  year={2020},  
+  organization={Springer}  
+}

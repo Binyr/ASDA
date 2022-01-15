@@ -215,6 +215,8 @@ python tools/visualize_stn.py \
 |SIM101 Num_Parts1|output/mpii/pose_resnet/res101_256x256_d256x3_adam_lr1e-3_stn_res18_numPart1/model_best.pth|
 
 ## Citation
+If you use our code or models in your research, please cite with:
+```
 @inproceedings{bin2020adversarial,  
   title={Adversarial semantic data augmentation for human pose estimation},  
   author={Bin, Yanrui and Cao, Xuan and Chen, Xinya and Ge, Yanhao and Tai, Ying and Wang, Chengjie and Li, Jilin and Huang, Feiyue and Gao, Changxin and Sang, Nong},  
@@ -223,3 +225,4 @@ python tools/visualize_stn.py \
   year={2020},  
   organization={Springer}  
 }
+```

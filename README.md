@@ -1,7 +1,7 @@
 ## Introduction
 
 This is an official pytorch implementation of Adversarial Semantic Data Augmentation for Human Pose Estimation.
-This code is based on the [official pytorch implementation of HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch)
+This code is based on the [official pytorch implementation of HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch).
 
 ## Environment
 python 3.7  
@@ -155,8 +155,7 @@ python tools/test_multiscale_multistage_voting.py \
 --cfg experiments/mpii/hrnet/stn/w32_256x256_adam_lr1e-3_adversalstnlr0001_posefirst_res18_numPart1_bmp.yaml \
 TEST.MODEL_FILE path/to/res_dir/model_best.pth
 ```
-可在文件中调整参数'num_stage_to_fuse' 和 'scale_pyramid'来融合不同的尺度和阶段的预测。为了避免反复预测，试运行该文件后，将在${POSE_ROOT}下保存一个名为'test_preds_pyramid_mstage.npy'的文件，该文件中存储了num_scale个尺度和num_stage个阶段的预测结果。**当需要对不同的模型多尺度预测时，需要预先删除文件'test_preds_pyramid_mstage.npy'。**
-
+The parameters 'num_stage_to_fuse' and 'scale_pyramid' can be adjusted in the file to fuse predictions of different scales and stages. To avoid repeated predictions, after running this file, a file named 'test_preds_pyramid_mstage.npy' will be saved under ${POSE_ROOT}, which stores prediction results for num_scale scales and num_stage stages. When multi-scale prediction for different models is required, **the file 'test_preds_pyramid_mstage.npy' needs to be deleted in advance.**
 #### Training on COCO dataset
 
 ```
@@ -180,18 +179,16 @@ python tools/visualize_stn.py \
 可视化结果将存储与'path/to/output_dir/stn_vis/'
 
 #### Important Parameters
-| Name        | Type  | Optimal | Function |       
-| --------    | -----  | ----  |--------|
-| ASA.NUM_AUG     | tuple   |(1,)| 贴图数量 |
-| ASA.PART_ANN_FILE | str  |'./lip/parts_bmp_filter_done/part_anns.json'|部件标注文件|
-| ASA.PART_ROOT_DIR | str  | './lip/parts_bmp_filter_done/' |部件文件夹|
-| ASA.ERODE_KERNEL|tuple|(3,3)| 用于模糊部件边界|
-|ASA.GAUSSIAN_KERNEL|tuple|(3,3)|用于模糊部件边界|
-|ASA.BOTH_HF_SA|bool|False|控制是否同时施加'半身人增强'和'贴图增强'。注意MPII数据集未开启'半身人增强'|
-|STN.LR|float|0.001|生成网络学习率|
-|STN.STN_FIRST| bool | 0 | 控制先生成器 |
-|STN.NG|int|1|每轮生成器迭代次数|
-|STN.ND|int|1|每轮判别器迭代次数|
+| Name        | Type  | Optimal |       
+| --------    | -----  | ----  |
+| ASA.NUM_AUG     | tuple   |(1,)|
+| ASA.PART_ANN_FILE | str  |'./lip/parts_bmp_filter_done/part_anns.json'|
+| ASA.PART_ROOT_DIR | str  | './lip/parts_bmp_filter_done/' |
+|ASA.BOTH_HF_SA|bool|False|
+|STN.LR|float|0.001|
+|STN.STN_FIRST| bool | 0 |
+|STN.NG|int|1|
+|STN.ND|int|1|
 
 
 ### Model ZOO

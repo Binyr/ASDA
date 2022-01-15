@@ -176,7 +176,7 @@ TEST.MODEL_FILE path/to/res_dir/model_best.pth
 python tools/visualize_stn.py \
 --cfg experiments/mpii/hrnet/stn/w32_256x256_adam_lr1e-3_adversalstnlr0001_posefirst_res18_numPart1_bmp.yaml
 ```
-可视化结果将存储与'path/to/output_dir/stn_vis/'
+result will be saved in 'path/to/output_dir/stn_vis/'
 
 #### Important Parameters
 | Name        | Type  | Optimal |       
